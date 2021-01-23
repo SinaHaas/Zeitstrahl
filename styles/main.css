@@ -1,0 +1,115 @@
+body {
+    background-color: white;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background-color: teal;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Amatic SC', cursive, Helvetica, sans-serif;
+    color: white;
+}
+
+header img{
+  padding-bottom: 1rem;
+}
+
+main {
+    padding-top: 8rem;
+    margin:auto;
+	  max-width:1080px;
+}
+
+#fortschrittZeitachse {
+  position: relative;
+	width:90%;
+	margin:auto;
+	height:100px;
+	margin-top:65px;
+}
+
+#fortschrittZeitachse #klein {
+	padding:0;
+	margin:0;
+	padding-top:15px;
+	z-index:9999;
+	position:absolute;
+	width:100%;
+	margin-top:-40px
+}
+
+#klein {
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+}
+
+
+main div:last-child div {
+    text-align: center;
+    margin: 2rem;
+}
+
+main div:first-child div img {
+    padding: 1rem;
+}
+
+main div:last-child div img {
+  padding: 1rem;
+  width: 90%;
+  height: 90%;
+}
+
+@media screen and (min-width:768px){
+
+  main div:last-child div img {
+    padding: 1rem;
+    width:500px;
+    height: 500px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  

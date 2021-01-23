@@ -1,0 +1,363 @@
+html {
+  font-family:'Open Sans Condensed', sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: white;
+  /* background-image: url("Tafel_Hintergrund.jpg"); */
+  background-color: rgb(66, 66, 66)
+  /* background-color: rgb(54, 13, 13); */
+} 
+
+ /* body {
+ background-color: rgb(85, 2, 2); 
+ } */
+
+ h1 {
+	 font-size: 2.5rem;
+ }
+
+ #uhrEinfügen {
+	 position: absolute;
+	 left: 50%;
+	 right: 50%;
+	 top: 22%;
+	 transition: all 200ms;
+	 transform: translate(-50%,-50%);
+	 width: 100px;
+	 height: 100px;
+	 border: 10px solid #1d1c1c;
+	 border-radius: 50%;
+	 background-color:  rgb(0, 247, 255);
+	 box-shadow: -2px 2px 0 rgb(34, 33, 33), inset 0 0 20px rgba(0,0,0,0.5);
+ }
+
+ #uhrEinfügenZ {
+	 content:"";
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 right: 50%;
+	 width: 40%;
+	 height: 6px;
+	 background: black;
+	 border-radius: 3px;
+	 transform-origin: left;
+	 transition: ease-in-out 1s;
+ }
+
+
+.uhr_active{
+	 animation: anim 1s ease-in-out;
+}
+
+@keyframes anim {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.uhr_activezwei{
+	animation: animzwei 1s ease-in-out;
+}
+
+@keyframes animzwei {
+   0% {
+	   transform: rotate(360deg);
+   }
+   100% {
+	   transform: rotate(0deg);
+   }
+}
+
+ header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color:  rgb(34, 33, 33);
+  z-index: 9999;
+  width: 100%;
+  color: white;
+  font-size: 0.9em;
+} 
+
+#Uhrenkörper {
+	justify-content: center;
+	margin: auto;
+	height: 130px;
+}
+
+#rückwärts, #vorwärts {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: rgb(66, 66, 66);
+	border-radius: 50%;
+	transition: .5s;
+	color: #fff;
+}
+
+#rückwärts:hover , #vorwärts:hover , #rechts:hover {
+	background-color: rgba(15, 244, 252, 0.87);
+	cursor: pointer;
+} 
+
+#vorwärts {
+	right: 42%;
+	top: 19%;
+	background-image: url("Pfeil.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#rückwärts {
+	left: 42%;
+	top: 19%;
+	background-image: url("Pfeil.png");
+	transform: rotate(180deg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#rechts {
+	background-image: url("Pfeil.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 40px;
+	bottom: 45%;
+	background-color: rgb(66, 66, 66);
+	border-radius: 50%;
+	transition:.5s;
+}
+
+.buttonDown {
+	animation-name: buttonDown;
+	animation-duration: 0.1s;
+	animation-fill-mode: forwards;
+}
+
+.buttonDown2 {
+	animation-name: buttonDown2;
+	animation-duration: 0.1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes buttonDown {
+	from {
+		top: 19%
+	}
+	to {
+		top: 20%
+	}
+}
+
+@keyframes buttonDown2 {
+	from {
+		top: 45%
+	}
+	to {
+		top: 40%
+	}
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* background-color: rgb(85, 2, 2); */
+}
+
+
+ li {
+	list-style:none;
+	justify-content: space-around;
+	align-items: center;
+	columns: #000000;;
+	/* cursor:pointer; */
+	font-weight:700;
+	/* transition:all ease 0.2s;  */
+	height:60px; 
+} 
+
+li p{
+	width: 10px;
+	padding: 5px;
+}
+
+/* li.active, li:hover {
+	color:#444;
+} */
+
+li:after {
+	position: absolute;
+	top: 0%;
+	content:" ";
+	display:block;
+	width:6px;
+	height:6px;
+	background:#777;
+	margin:auto;
+	border:solid 7px #fff;
+	border-radius:50%;
+	/* box-shadow:0 2px 13px -1px rgba(0,0,0,0.3);
+	transition:all ease 0.2s; */
+}
+
+/* li:hover:after {
+	background:#555;
+} */
+
+#groß {
+	position: relative;
+	margin: auto;
+	width: 75%;
+	height: 320px;
+	display: flex;
+	border-radius: 30px;
+	justify-content: center;
+	align-items: center;
+	background: rgb(34, 33, 33);
+}
+
+#groß #vorhanden {
+	/* width: 300px;
+	height: 200px; */
+	background: rgb(34, 33, 33);
+	position: absolute;
+	top: 10px; 
+	left: 50px;
+}
+
+#groß p {
+	font-size: 1.2rem;
+}
+
+#infoText{
+	position: absolute;
+	z-index: 10000000;
+	margin: 2%;
+	width: 600px;
+	height: 200px;
+	top: 45px;
+	right: 135px;
+	background:rgb(34, 33, 33);
+}
+ 
+#anfangInfoV {
+	position: absolute;
+	margin: 2%;
+	width: 600px;
+	height: 200px;
+	top: 45px;
+	right: 135px;
+	background: rgb(34, 33, 33);
+}
+
+#anfangInfoR {
+	position: absolute;
+	margin: 2%;
+	width: 600px;
+	height: 200px;
+	top: 45px;
+	right: 135px;
+	background: rgb(34, 33, 33);
+}
+
+#anfangInfo {
+	position: absolute;
+	margin: 2%;
+	width: 600px;
+	height: 200px;
+	top: 45px;
+	right: 135px;
+	background: rgb(34, 33, 33);
+}
+
+
+#groß p {
+	background:rgb(34, 33, 33) ;
+	width: 200px;
+	height: 30px;
+	position: absolute;
+	top: 0%;
+	right: 350px;
+}
+
+#fortschrittZeitachse {
+	position:relative;
+	width:100%;
+	margin:auto;
+	margin-top: 5px;
+	margin-bottom: 1px;
+	height: 100px;
+	margin-top:50px;
+}
+
+#groß #links {
+	position: absolute;
+	left: 330px;
+	display: hidden;
+}
+
+#groß #rechts {
+	position: absolute;
+	right: 5%;
+}
+
+#klein{
+	position: absolute;
+	top: 0%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	z-index:9999;
+	position:absolute;
+	width:100%;
+}
+
+#klein div{ 
+	position: relative;
+}
+
+
+#linie{
+	width:90%;
+	margin:auto;
+	background: black;
+	height:6px;
+	position:absolute;
+	left: 5%;
+	top:5%;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#linieFortschritt{
+    content:" ";
+	width:0%;
+	height:100%;
+	background: rgb(0, 247, 255);	 
+	background: linear-gradient(to right, rgb(0, 247, 255) 0%,rgb(0, 109, 136) 100%); 
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+} 
+
+/* @keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+} */
+
+
